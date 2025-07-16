@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,46 @@
     <meta name="description" content="Portfolio da desenvolvedora Débora de Souza">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/c0b7a8902e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
+    <!--PARTE DO HEADER (MENU DESKTOP)-->
     <header class="header">
+    <nav class="header__nav">
+        <ul class="menu menu--principal">
+            <li class="menu__item">
+                <a class="menu__link active" href="#home">
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#projetos">
+                    <span class="menu__text">Projetos</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#sobre">
+                    <span class="menu__text">Sobre</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#contato">
+                    <span class="menu__text">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--PARTE DO HEADER (LOGO E DARK OU LIGHT MODE)-->
         <div class="header__brand">
             <img src="assets/images/computador_3D.PNG" alt="logo deboradevsouza" class="brand__logo">
         </div>
-        <i id="toggleTheme" class="bi bi-sun"></i>
+        <div class="header__toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
     </header>
-
-    <nav>
+    <!--PARTE DO HEADER (MENU MOBILE)-->
+    <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
                 <a class="menu__link active" href="#home">
@@ -45,6 +74,59 @@
             </li>
         </ul>
     </nav>
+    <!--PARTE DO SOBRE COM FRASE E INFO-->
+    <main>
+        <div class="main__content1">
+            <h1><b>Soluções criativas &</b> Desenvolvimento Front-end</h1>
+            <p>Débora de Souza, Teresópolis-RJ, desenvolvedora front-end em formação.</p>
+            <!--LINKS PARA GITHUB, LINKEDIN E INSTAGRAM-->
+            <ul class="menu menu--social">
+                <li>
+                    <a class="menu__link" href="">
+                        <i class="menu__icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="">
+                        <i class="menu__icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="">
+                        <i class="menu__icon bi bi-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="btn btn--primary">
+                <span>Ver projetos</span>
+                <i class="bi bi-arrow-down"></i>
+            </button>
+        </div> 
+    </main>
     
+    <section class="skills">
+        <h2>Tech stack</h2>
+        <ul class="skills__list">
+            <li class="skills__item">
+                <i class="fa-brands fa-html5"></i>
+            </li>
+            <li class="skills__item">
+                <i class="fa-brands fa-css"></i>
+            </li>
+            <li class="skills__item">
+                <i class="fa-brands fa-js"></i>
+            </li>
+            <li class="skills__item">
+                <i class="fa-brands fa-vuejs"></i>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>
+            2025. Débora de Souza. Desenvolvido por <a href="https://github.com/deboradevsouza">@deboradevsouza</a>
+        </p>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
