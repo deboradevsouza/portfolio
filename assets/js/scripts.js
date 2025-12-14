@@ -11,3 +11,10 @@ function changeTheme() {
 
 toggleTheme.addEventListener("click", changeTheme);
 
+function irParaProjetos() {
+    const secao = document.querySelector('#projetos')
+
+    if (secao) {
+        secao.scrollIntoView({behavior: 'smooth'})
+    }
+}

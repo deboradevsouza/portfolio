@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
@@ -24,11 +23,19 @@
     scrollbar-color: var(--secondary-bg-color) transparent;
 }
 
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background: var(--primary-bg-color);
     color: var(--primary-color);
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 ::-webkit-scrollbar {
@@ -61,27 +68,32 @@ b {
     font-weight: 400;
 }
 
+/* Mobile-first typography */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduced from 2.5rem */
     font-weight: 200;
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduced from 2rem */
     text-align: center;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem; /* Reduced from 0.4rem */
+    line-height: 1.3;
 }
 
 h3 {
-  font-size: 1.55rem;
+  font-size: 1.25rem; /* Reduced from 1.55rem */
   text-align: left;
+  line-height: 1.3;
 }
 
 h4 {
   color: var(--primary-color);
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1rem; /* Reduced from 1.15rem */
   text-align: left;
+  line-height: 1.4;
 }
 
 h1, h2, h3 {
@@ -93,10 +105,13 @@ h1, h2, h3 {
 
 p, span, li {
     font-size: 1rem;
+    line-height: 1.5;
 }
 
 p {
     text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .header {
@@ -115,9 +130,10 @@ p {
 }
 
 .header__brand .brand__logo {
-    width: 3.25rem;
-    height: 3.25rem;
-    transform: scaleX(-1)
+    width: 100%;
+    max-width: 200px; /* Added max-width */
+    height: auto; /* Changed from fixed height */
+    max-height: 3.25rem;
 }
 
 #toggleTheme {
@@ -135,10 +151,11 @@ p {
 
 .menu__item {
     width: 100%;
+    flex: 1; /* Distribute space evenly */
 }
 
 .menu--mobile {
-    width: 100vw;
+    width: 100%; /* Changed from 100vw */
     position: fixed;
     bottom: 0;
     justify-content: space-between;
@@ -150,8 +167,8 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1rem;
-    gap: .5rem;
+    padding: 0.5rem 0.5rem; /* Reduced padding */
+    gap: .25rem; /* Reduced gap */
 }
 
 .menu__link.active .menu__icon, 
@@ -167,12 +184,13 @@ p {
 }
 
 .menu__icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Reduced from 1.5rem */
 }
 
 .menu__text {
-    font-size: .75rem;
+    font-size: .65rem; /* Reduced from .75rem */
     text-transform: uppercase;
+    text-align: center;
 }
 
 .header__nav {
@@ -188,12 +206,15 @@ main {
     flex-direction: column;
     gap: 2rem;
     padding: 2.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .main__content1 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .skills {
@@ -202,9 +223,10 @@ main {
     justify-content: flex-start;
     align-items: center;
     gap: 1.25rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem; /* Reduced padding */
     background-color: var(--secondary-bg-color);
     margin-top: 1rem;
+    width: 100%;
 }
 
 .skills h2 {
@@ -214,12 +236,14 @@ main {
 .skills__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    flex-wrap: wrap; /* Added wrap */
+    justify-content: center; /* Changed from space-between */
+    gap: 1rem; /* Reduced from 2rem */
+    width: 100%;
 }
 
 .skills__item {
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Reduced from 1.5rem */
 }
 
 .menu--social {
@@ -232,6 +256,7 @@ main {
     align-items: center;
     gap: 0.625rem;
     width: 100%;
+    max-width: 300px; /* Added max-width */
     background: transparent;
     border-radius: 3.125rem;
     border: none;
@@ -239,6 +264,7 @@ main {
     transition: ease-in-out .3s;
     cursor: pointer;
     color: var(--primary-color);
+    margin: 0 auto; /* Center buttons */
 }
 
 .btn:hover {
@@ -247,7 +273,7 @@ main {
 }
 
 .btn span, .btn i {
-    font-size: 1.25rem;
+    font-size: 1rem; /* Reduced from 1.25rem */
     text-transform: uppercase;
 }
 
@@ -263,17 +289,52 @@ main, .projects, .about, .contact {
     padding: 2.5rem 1rem;
 }
 
+.descricao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 2.5rem 1rem;
+}
+
+.computador-logo {
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
+}
+
 footer p {
     font-size: .875rem;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
 }
 
+/* Tablet */
 @media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+    }
+    
+    h3 {
+        font-size: 1.55rem;
+    }
+    
+    h4 {
+        font-size: 1.15rem;
+    }
+    
     .header {
         position: fixed;
         border-bottom: 1px solid var(--secondary-bg-color);
-        padding: 1rem 4rem;
+        padding: 1rem 2rem; /* Reduced from 4rem */
         background: var(--primary-bg-color);
     }
 
@@ -291,24 +352,41 @@ footer p {
     }
 
     main {
-        padding: 8rem 6rem 4rem 6rem;
+        padding: 8rem 3rem 4rem 3rem; /* Reduced from 6rem */
     }
 
-    .main__content1 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    .skills__list {
+        gap: 2rem;
     }
-
-    footer {
-        margin: 0;
+    
+    .skills__item {
+        font-size: 1.5rem;
+    }
+    
+    .btn span, .btn i {
+        font-size: 1.25rem;
     }
 }
 
+/* Desktop */
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 4rem;
+    }
+    
+    main {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+}
+
+/* Large Desktop */
 @media (min-width: 1400px) {
     .header {
-        position: fixed;
-        border-bottom: 1px solid var(--secondary-bg-color);
         padding: 1rem 15rem;
+    }
+    
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
     }
 }
