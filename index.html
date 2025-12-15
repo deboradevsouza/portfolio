@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - deboradevsouza</title>
+    <title>Portfolio - Home | deboradevsouza</title>
     <meta name="description" content="Portfolio da desenvolvedora Débora de Souza">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -13,31 +13,31 @@
 <body>
     <!--PARTE DO HEADER (MENU DESKTOP)-->
     <header class="header">
-    <nav class="header__nav">
-        <ul class="menu menu--principal">
-            <li class="menu__item">
-                <a class="menu__link active" href="#home">
-                    <span class="menu__text">Home</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#projetos">
-                    <span class="menu__text">Projetos</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#sobre">
-                    <span class="menu__text">Sobre</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#contato">
-                    <span class="menu__text">Contato</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!--PARTE DO HEADER (LOGO E DARK OU LIGHT MODE)-->
+        <nav class="header__nav">
+            <ul class="menu menu--principal">
+                <li class="menu__item">
+                    <a class="menu__link active" href="index.html">
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="projetos.html">
+                        <span class="menu__text">Projetos</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="sobre.html">
+                        <span class="menu__text">Sobre</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="contato.html">
+                        <span class="menu__text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--PARTE DO HEADER (LOGO E DARK OU LIGHT MODE)-->
         <div class="header__brand">
             <img src="assets/images/nome3d.png" alt="logo deboradevsouza" class="brand__logo">
         </div>
@@ -45,36 +45,38 @@
             <i id="toggleTheme" class="bi bi-sun"></i>
         </div>
     </header>
+    
     <!--PARTE DO HEADER (MENU MOBILE)-->
     <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
-                <a class="menu__link active" href="#home">
+                <a class="menu__link active" href="index.html">
                     <i class="menu__icon bi bi-house-door"></i>
                     <span class="menu__text">Home</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#projetos">
+                <a class="menu__link" href="projetos.html">
                     <i class="menu__icon bi bi-window-stack"></i>
                     <span class="menu__text">Projetos</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#sobre">
+                <a class="menu__link" href="sobre.html">
                     <i class="menu__icon bi bi-person"></i>
                     <span class="menu__text">Sobre</span>
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#contato">
+                <a class="menu__link" href="contato.html">
                     <i class="menu__icon bi bi-envelope"></i>
                     <span class="menu__text">Contato</span>
                 </a>
             </li>
         </ul>
     </nav>
-    <!--PARTE DO SOBRE COM FRASE E INFO-->
+    
+    <!--MAIN CONTENT (Home page specific)-->
     <main>
         <div class="main__content1">
             <h1><b>Arte &</b> <br>Desenvolvimento Front-end</h1>
@@ -82,23 +84,24 @@
             <!--LINKS PARA GITHUB, LINKEDIN E INSTAGRAM-->
             <ul class="menu menu--social">
                 <li>
-                    <a class="menu__link" href="https://github.com/deboradevsouza" target="_blank"  rel="noopener noreferrer"  >
+                    <a class="menu__link" href="https://github.com/deboradevsouza" target="_blank" rel="noopener noreferrer">
                         <i class="menu__icon bi bi-github"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="menu__link" href="https://www.linkedin.com/in/deboradevsouza/" target="_blank"  rel="noopener noreferrer" >
+                    <a class="menu__link" href="https://www.linkedin.com/in/deboradevsouza/" target="_blank" rel="noopener noreferrer">
                         <i class="menu__icon bi bi-linkedin"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="menu__link" href="https://www.instagram.com/deborasouzart/" target="_blank"  rel="noopener noreferrer" >
+                    <a class="menu__link" href="https://www.instagram.com/deborasouzart/" target="_blank" rel="noopener noreferrer">
                         <i class="menu__icon bi bi-instagram"></i>
                     </a>
                 </li>
             </ul>
         </div>
     </main>
+    
     <section class="skills">
         <h2>Tech stack</h2>
         <ul class="skills__list">
@@ -121,9 +124,27 @@
         <p>
             Estou estudando desenvolvimento de software, focando em frontend e me divertindo em projetos pessoais usando minhas artes :) 
         </p>
-        <img
-        class="computador-logo" 
-        src="./assets/images/computador_3D.PNG" alt="computador com logo @deboradevsouza">
+        <img class="computador-logo" src="./assets/images/computador_3D.PNG" alt="computador com logo @deboradevsouza">
+    </section>
+
+    <!-- HOME PAGE ONLY CONTENT -->
+    <section class="home-projects-preview">
+        <h2>Alguns Projetos</h2>
+        <div class="preview-container">
+            <div class="preview-card">
+                <h3>Projeto Destaque 1</h3>
+                <p>Breve descrição...</p>
+                <a href="projetos.html#projeto1" class="btn">Ver mais</a>
+            </div>
+            <div class="preview-card">
+                <h3>Projeto Destaque 2</h3>
+                <p>Breve descrição...</p>
+                <a href="projetos.html#projeto2" class="btn">Ver mais</a>
+            </div>
+        </div>
+        <div class="see-all">
+            <a href="projetos.html" class="btn btn-primary">Ver todos os projetos</a>
+        </div>
     </section>
 
     <footer>

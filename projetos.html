@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | deboradevsouza</title>
+    <meta name="description" content="Projetos desenvolvidos por Débora de Souza">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/c0b7a8902e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <!-- Reuse the same header structure -->
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="menu menu--principal">
+                <li class="menu__item">
+                    <a class="menu__link" href="index.html">
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link active" href="projetos.html">
+                        <span class="menu__text">Projetos</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="sobre.html">
+                        <span class="menu__text">Sobre</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="contato.html">
+                        <span class="menu__text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__brand">
+            <img src="assets/images/nome3d.png" alt="logo deboradevsouza" class="brand__logo">
+        </div>
+        <div class="header__toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <nav class="nav--mobile">
+        <ul class="menu menu--mobile">
+            <li class="menu__item">
+                <a class="menu__link" href="index.html">
+                    <i class="menu__icon bi bi-house-door"></i>
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link active" href="projetos.html">
+                    <i class="menu__icon bi bi-window-stack"></i>
+                    <span class="menu__text">Projetos</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="sobre.html">
+                    <i class="menu__icon bi bi-person"></i>
+                    <span class="menu__text">Sobre</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="contato.html">
+                    <i class="menu__icon bi bi-envelope"></i>
+                    <span class="menu__text">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Projects Page Content -->
+    <main class="projects-page">
+        <h1 class="page-title">Meus Projetos</h1>
+        <p class="page-subtitle">Uma coleção dos projetos que desenvolvi enquanto aprendo programação.</p>
+        
+        <div class="projects-grid">
+            <article id="projeto1" class="project-card-full">
+                <div class="project-image">
+                    <img src="assets/images/projeto1.jpg" alt="Projeto 1">
+                </div>
+                <div class="project-info">
+                    <h2>Portfolio Website</h2>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <p>Site de portfolio responsivo com dark/light mode e navegação suave.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">Ver Demo</a>
+                        <a href="https://github.com/deboradevsouza/portfolio" class="btn" target="_blank">
+                            <i class="bi bi-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article id="projeto2" class="project-card-full">
+                <div class="project-image">
+                    <img src="assets/images/projeto2.jpg" alt="Projeto 2">
+                </div>
+                <div class="project-info">
+                    <h2>App de Tarefas</h2>
+                    <div class="project-tech">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Local Storage</span>
+                    </div>
+                    <p>Aplicativo de lista de tarefas com armazenamento local e interface intuitiva.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">Ver Demo</a>
+                        <a href="https://github.com/deboradevsouza/todo-app" class="btn" target="_blank">
+                            <i class="bi bi-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Add more projects as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            2025. Débora de Souza. Desenvolvido por <a href="https://github.com/deboradevsouza">@deboradevsouza</a>
+        </p>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
