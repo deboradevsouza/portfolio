@@ -32,10 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleTheme.addEventListener("click", changeTheme);
     }
 
-    // Highlight active menu item based on current page
+    // Deixar com a cor na aba em que estiver selecionado
     highlightActiveMenuItem();
     
-    // If on projects page and there's a hash in URL, scroll to that project
     if (window.location.hash && document.querySelector(window.location.hash)) {
         setTimeout(() => {
             document.querySelector(window.location.hash).scrollIntoView({
@@ -46,16 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to highlight the active menu item
+// Deixar com a cor na aba em que estiver selecionado
 function highlightActiveMenuItem() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const menuLinks = document.querySelectorAll('.menu__link');
     
     menuLinks.forEach(link => {
-        // Remove active class from all links
+        
         link.classList.remove('active');
         
-        // Check if this link points to the current page
         const linkHref = link.getAttribute('href');
         if (linkHref === currentPage || 
             (currentPage === '' && linkHref === 'index.html') ||
