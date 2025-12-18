@@ -420,6 +420,15 @@ article {
     main {
         padding: 8rem 6rem 4rem 6rem;
     }
+
+    .computador-logo {
+        height: 400px;
+        width: auto;
+    }
+
+    .descricao {
+        padding: 8rem 6rem 4rem 6rem;
+    }
 }
 
 /* Large Desktop */
@@ -431,5 +440,14 @@ article {
     main {
         max-width: 1400px;
         margin: 0 auto;
+    }
+
+    .computador-logo {
+        height: 400px;
+        width: auto;
+    }
+
+    .descricao {
+        padding: 8rem 6rem 4rem 6rem;
     }
 }
